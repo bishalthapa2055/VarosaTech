@@ -11,7 +11,9 @@ Packages Used :
 I have used my custom Error handling mechanisms like :
 1.Bad request Errors;
 2.Not found Errors;
-etc...
+etc...\
+
+I have also added search User features allong with the pagination features ;
 
 I have used Express js not Graph QL but I will learn Graph QL ,
 further on You can watch the code easily and send me some feedback.
