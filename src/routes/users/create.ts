@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { body } from "express-validator";
+import { body, check } from "express-validator";
 import { createUsersHandler } from "../../controllers/create";
 import { validateRequest } from "../../middlewares/validate-request";
 
@@ -10,15 +10,15 @@ router.post(
 
   [
     body("name")
-      .isLength({ min: 5 })
+      .isLength({ min: 3 })
       .withMessage("Name must be greater than 3 character"),
-    body("address").withMessage("Address is required Field"),
-    body("dateofbirth").withMessage("dateofbirth is required Field"),
-    body("nationality").withMessage("nationality is required Field"),
-    body("educationbackground").withMessage(
-      "educationbackground is required Field"
-    ),
-    body("gender").withMessage("gender is required Field"),
+    body("address").notEmpty().withMessage("Address is required Field"),
+    body("dateofbirth").notEmpty().withMessage("dateofbirth is required Field"),
+    body("nationality").notEmpty().withMessage("nationality is required Field"),
+    body("educationbackground")
+      .notEmpty()
+      .withMessage("educationbackground is required Field"),
+    body("gender").notEmpty().withMessage("gender is required Field"),
   ],
   validateRequest,
   createUsersHandler
