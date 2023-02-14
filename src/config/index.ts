@@ -9,7 +9,8 @@ const config = {
 
     port: process.env.PORT || 8848,
     allowedOrigins: process.env.ALLOWED_ORIGINS || "http://localhost:8848",
-    //  "http://localhost:8848"
+
+    // ||"http://localhost:8848",
   },
 };
 
