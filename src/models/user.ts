@@ -15,7 +15,8 @@ export interface UserAttrs {
   nationality: string;
   dateofbirth: string;
   educationbackground: string;
-  modeofcontact: modeofcontact;
+  // modeofcontact: modeofcontact;
+  modeofcontact: String;
 }
 
 interface UserModel extends mongoose.Model<UserDoc> {
@@ -30,7 +31,8 @@ export interface UserDoc extends mongoose.Document, UserAttrs {
   nationality: string;
   dateofbirth: string;
   educationbackground: string;
-  modeofcontact: modeofcontact;
+  // modeofcontact: modeofcontact;
+  modeofcontact: string;
   createdAt?: Date;
   updatedAt?: Date;
 }
@@ -77,8 +79,9 @@ const UserSchema = new mongoose.Schema<UserDoc>(
     },
     modeofcontact: {
       type: String,
-      enum: modeofcontact,
-      default: modeofcontact.none,
+      // enum: modeofcontact,
+      // default: modeofcontact.none,
+      // type: String,
     },
   },
   {

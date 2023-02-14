@@ -3,7 +3,8 @@ import Locals from "./Locals";
 
 // import { indexDashboardRouter } from "../routes/v1/dashboard";
 // import { indexwebRouter } from "../routes/v1/web";
-import { indexRouter } from "../routes/";
+// import { indexRouter } from "../routes/";
+import { indexUserRouter } from "../routes/users";
 // import { webRouter } from "../routes/v1/web";
 // import { commonRouter } from "../routes/v1/common";
 
@@ -12,7 +13,7 @@ class Routes {
   public mountWebApi(_express: Application): Application {
     const webPrefix = Locals.config().webPrefix;
 
-    return _express.use(`/api/v1/${webPrefix}`, indexRouter);
+    return _express.use(`/api/v1/${webPrefix}`, indexUserRouter);
   }
 
   //mount dashboard apis

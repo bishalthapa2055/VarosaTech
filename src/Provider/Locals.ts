@@ -17,7 +17,7 @@ class Locals {
     dotenv.config({ path: path.join(__dirname, "../../.env") });
     const url = process.env.APP_URL || `http://localhost:3000`;
     const isCORSEnabled = process.env.CORS_ENABLED || true;
-    const webPrefix = process.env.WEB_API_PREFIX || "web";
+    const webPrefix = process.env.WEB_API_PREFIX || "user";
     const dashboardPrefix = process.env.APP_API_PREFIX || "dashboard";
     const commonPrefix = process.env.APP_API_PREFIX || "common";
 
