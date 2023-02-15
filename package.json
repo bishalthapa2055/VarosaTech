@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/server.ts",
   "scripts": {
-    "build": "npm run tsc",
+    "build": "tsc",
     "start": "node build/server.js",
     "tsc": "tsc -p tsconfig.json",
     "server": "ts-node-dev src/server.ts",
