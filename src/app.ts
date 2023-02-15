@@ -6,10 +6,21 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/api/v1/", indexRouter);
+app.get("/", (req, res) => {
+  res
+    .status(200)
+    .json({
+      status: true,
+      message: "Deploying server for first time in render . com",
+    });
+});
 app.all("/", (req, res) => {
   res
     .status(200)
-    .json({ status: true, message: "Deploying server for first time in render . com" });
+    .json({
+      status: true,
+      message: "Deploying server for first time in render . com",
+    });
 });
 
 app.all("*", (req, res) => {
