@@ -9,7 +9,7 @@ app.use("/api/v1/", indexRouter);
 app.all("/", (req, res) => {
   res
     .status(200)
-    .json({ status: true, message: "Deployed first server in render" });
+    .json({ status: true, message: "Deploying server for first time in render . com" });
 });
 
 app.all("*", (req, res) => {
