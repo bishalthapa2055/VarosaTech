@@ -7,7 +7,9 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/api/v1/", indexRouter);
 app.all("/", (req, res) => {
-  res.status(200).json({ status: true, message: "Welcome Sir !!!!" });
+  res
+    .status(200)
+    .json({ status: true, message: "Deployed first server in render" });
 });
 
 app.all("*", (req, res) => {
